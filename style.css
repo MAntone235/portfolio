@@ -75,7 +75,7 @@ header {
     color: rgb(1, 62, 65);
     text-decoration: none;
     font-size: var(--font-size-20);
-    font-family: "Roboto", sans-serif;
+    font-family: "Shadows Into Light", cursive;
 }
 
 .nav-menu a:hover {
@@ -100,7 +100,7 @@ h1 {
 }
 
 .hero-section {
-    background-image: url(./Images/background\ image.jpg);
+    background-image: url(./Images/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,13 +122,13 @@ h1 {
 
 .desc h2 {
     font-size: 40px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Shadows Into Light", cursive;
     color: rgb(1, 62, 65);
 }
 
 .desc p {
     font-size: 20px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Shadows Into Light", cursive;
     color: var(--text-color);
     margin-top: 3px;
 }
