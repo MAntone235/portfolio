@@ -5,22 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margaret Antone's Portfolio</title>
-    <link rel="stylesheet" href="./">
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 
 <body>
-    <header class="hero-section">
-        <h1>Margaret Antone</h1>
-        <img src="./Images/Portfolio Picture.jpg" alt="picture of Margaret">
+    <header>
+        <div class="menu-container">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <h1>Margaret Antone</h1>
+            <nav id="nav-menu" class="nav-menu">
+                <ul>
+                    <li><a href="./otherpages/about-me.html">About Me</a></li>
+                    <li><a href="./otherpages/experience.html">Experience</a></li>
+                    <li><a href="./otherpages/resume.html">Resume</a></li>
+                    <li><a href="./otherpages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main class="desc">
-        <h2>Graphic Designer</h2>
-        <p>
-            A passionate Graphic Designer & Digital Artist, UI/UX enthusiast, specializing in designing and creating.
-        </p>
-        <p>test</p>
-    </main>
+
+<main>
+    <section class="hero-section">
+
+        <img src="./Images/Portfolio Picture.jpg" alt="picture of Margaret">
+        <div class="desc">
+            <h2>Graphic Designer</h2>
+            <p>
+                A passionate Graphic Designer & Digital Artist, UI/UX enthusiast, specializing in designing and creating.
+            </p>
+        </div>
+    </section>
+</maSin>
+    
 </body>
 
 </html>
