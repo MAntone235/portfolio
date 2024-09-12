@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <script src="./script.js"></script>
 </head>
 
@@ -35,16 +37,34 @@
 
 <main>
     <section class="hero-section">
-
-        <img src="./Images/Portfolio Picture.jpg" alt="picture of Margaret">
+        <img src="./Images/PortfolioPicture.jpg" alt="picture of Margaret">
         <div class="desc">
             <h2>Graphic Designer</h2>
             <p>
                 A passionate Graphic Designer & Digital Artist, UI/UX enthusiast, specializing in designing and creating.
             </p>
+            <button class="about-button" onclick="openPopup()">About Me</button>
         </div>
     </section>
-</maSin>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Margaret Antone, a passionate Graphic Designer & Digital Artist with a love for creating engaging visual content, based out of London, Ontario. As a mother of 3 with a passion for creative design. My work spans various areas including UI/UX design, digital art, and more. I thrive on turning creative ideas into compelling designs.
+            </p>
+            <p>
+                  I want to explore and create in all aspects of life. From creating and designing fun art projects with my children, to bringing my client's ideas to life. I enjoy all aspects of design from start to finish. 
+            </p>
+            <p>
+                I am very focused on giving my clients the end results they imagine!
+            </p>
+            <p>
+                I have recently completed the INDIGItech program, a specialized initiative by the Indigenous Friends Association aimed at equipping Indigenous individuals with advanced skills in technology, coding, and digital literacy along with digital art. Currently, I am serving as an intern with the Indigenous Friends Association, where I am furthering my education and honing my expertise in Web Development.
+        </div>
+    </div>
+</main>
     
 </body>
 

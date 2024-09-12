@@ -1,3 +1,4 @@
+/* Root variables */
 :root {
     --textbox-color: rgba(33, 114, 114, 0.664);
     --border-color: rgba(50, 153, 153, 0.664);
@@ -8,14 +9,15 @@
     --font-size-28: 28px;
 }
 
-
+/* Base styles for the body */
 body{
-        font-family: "Shadows Into Light", cursive;
-        font-weight: 400;
+    font-family: "Merriweather Sans", sans-serif;
+        font-weight: 200;
         font-style: normal;
         
 }
 
+/* Styles for the header section */
 header {
     position: fixed;
     width: 100%;
@@ -25,6 +27,7 @@ header {
     z-index: 1000;
 }
 
+/* Container for menu items in the header */
 .menu-container {
     display: flex;
     justify-content: space-between;
@@ -32,6 +35,7 @@ header {
     padding: 10px;
 }
 
+/* Styles for the hamburger menu icon */
 .hamburger-menu {
     cursor: pointer;
     display: flex;
@@ -39,12 +43,14 @@ header {
     gap: 5px;
 }
 
+/* Styles for each bar in the hamburger menu */
 .bar {
     width: 28px;
     height: 5px;
     background-color: rgb(1, 62, 65);
 }
 
+/* Navigation menu styles */
 .nav-menu {
     display: none;
     position: absolute;
@@ -55,20 +61,24 @@ header {
     border-radius: 5px;
 }
 
+/* Styles for the list within the navigation menu */
 .nav-menu ul {
     list-style: none;
     padding: 2%;
     margin: 0;
 }
 
+/* Styles for each list item in the navigation menu */
 .nav-menu ul li {
     border-bottom: 1px solid #555;
 }
 
+/* Remove border from the last list item */
 .nav-menu ul li:last-child {
     border-bottom: none;
 }
 
+/* Styles for links in the navigation menu */
 .nav-menu a {
     display: block;
     padding: 20px;
@@ -78,27 +88,42 @@ header {
     font-family: "Shadows Into Light", cursive;
 }
 
+/* Hover effect for navigation links */
 .nav-menu a:hover {
     background-color: #444;
 }
 
+/* Styles for the main header (h1) */
 h1 {
     font-size: 40px;
     font-weight: 300;
-    font-style: normal;
+    font-style: italic;
     color: rgb(1, 62, 65);
     margin: 0;
     padding-right: 40%;
 }
 
+/* Styles for images in the hero section */
 .hero-section img {
     float: left;
     max-width: 100%;
     border-radius: 50%;
     max-height: 400px;
-    
+    transform: scale(1.2);
+    animation: zoomInOut 2s forwards;
 }
 
+/* Define the zoom-in and zoom-out animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(.80);
+    }
+}
+
+/* Styles for the hero section */
 .hero-section {
     background-image: url(./Images/background.jpg);
     background-size: cover;
@@ -110,6 +135,7 @@ h1 {
     box-sizing: border-box; 
 }
 
+/* Styles for the description section */
 .desc {
     text-align: center;
     background-color: var(--textbox-color);
@@ -117,23 +143,96 @@ h1 {
     border:5px solid  var(--border-color) ;
     margin-left: 50%;
     margin-right: 8%;
-    margin-top: 10%;
+    margin-top: 7%;
+    padding-bottom: 2%;
+    transform: scale(1.2); 
+    transition: transform 1s ease-in-out;
+}
+
+.zoom-end {
+    transform: scale(1);
 }
 
 .desc h2 {
-    font-size: 40px;
-    font-family: "Shadows Into Light", cursive;
+    font-size: 30px;
+    font-family: "Merriweather Sans", sans-serif;
+    font-style: italic;
     color: rgb(1, 62, 65);
 }
 
+/* Styles for paragraphs inside the description section */
 .desc p {
-    font-size: 20px;
-    font-family: "Shadows Into Light", cursive;
-    color: var(--text-color);
+    font-size: var(--font-size-16);
+    font-family: "Merriweather Sans", sans-serif;
+    color: rgb(213, 255, 255);
     margin-top: 3px;
 }
 
+/* Popup container */
+.popup {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
 
+/* Popup content */
+.popup-content {
+    background-color:rgb(151, 213, 216);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* The close button */
+.close-button {
+    color: #707070;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button styling */
+.about-button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: var(--font-size-16);
+    color: white;
+    background-color: var(--border-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5%; 
+    transition: background-color 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-button:hover {
+    background-color: rgb(99, 136, 136); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the About and Contact body sections */
 .about-body,
 .contact-body{
     background-image: url(./Images/background\ image.jpg);
@@ -147,6 +246,7 @@ h1 {
     overflow: hidden;
 }
 
+/* Styles for the About section */
 .about{
     text-align: center;
     background-color: var(--textbox-color);
