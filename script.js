@@ -51,3 +51,40 @@ function applyZoomEffect() {
     }, 2000);
 }
 document.addEventListener('DOMContentLoaded', applyZoomEffect);
+
+// Experience
+
+//  buttons, popups, and close buttons
+const openButtons = document.querySelectorAll('.open-popup');
+const popups = document.querySelectorAll('.popup');
+const closeButtons = document.querySelectorAll('.close-button');
+
+//  open the popup
+function openPopup(event) {
+    const projectId = event.target.getAttribute('data-project');
+    document.getElementById(`${projectId}-popup`).style.display = 'flex';
+}
+
+// close the popup
+function closePopup(event) {
+    event.target.closest('.popup').style.display = 'none';
+}
+
+// Add event listeners to open buttons
+openButtons.forEach(button => {
+    button.addEventListener('click', openPopup);
+});
+
+// Add event listeners to close buttons
+closeButtons.forEach(button => {
+    button.addEventListener('click', closePopup);
+});
+
+// Close the popup when clicking outside of the popup content
+popups.forEach(popup => {
+    popup.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
