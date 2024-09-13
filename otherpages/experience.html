@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../style.css">
 
 </head>
-<body>
+<body class="exBody">
     <header>
         <div class="menu-container">
             <div class="hamburger-menu" onclick="toggleMenu()">
@@ -27,124 +27,104 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section>
+    <main class="exMain">
+        <section class="exP">
             <p>
                 With extensive experience in customer service, remote work, web development, graphic design, and management, I bring a well-rounded skill set to diverse professional settings. My customer service background has sharpened my communication and problem-solving abilities, while remote work has enhanced my time management and self-discipline. In web development, I focus on creating user-friendly websites with modern technologies, and my graphic design skills enable me to deliver visually compelling and brand-aligned designs. Additionally, my management experience has strengthened my leadership and organizational capabilities, allowing me to effectively guide teams and oversee projects. These combined skills drive my success in dynamic and fast-paced environments.
             </p>
+            <p>
+                Below are some of my projects I have completed
+            </p>
         </section>
-
-        <section>
-            <div>
-                <h1>UX Design Case Study</h1>
-                <p>A case study we as a group within our Indigitech program created to tackle lack of access within all Indigenous communities.</p>
-                <button class="open-popup" data-project="ux-design-case-study">View Details</button>
+        <!-- <h1 class="projects">Projects</h1> -->
+         <div class="flex-project">
+             <section class="ux">
+                 <div>
+                     <h2>UX Design Case Study</h2>
+                    <p>A case study by a group from Indigitech program created to tackle lack of access within all Indigenous communities.</p> 
+                </div>
+                <div class="learnMore">
+                    <a href="#modal-ux" class="modal-trigger">Learn More</a>
+                </div>
+                </section>
+                
+                <section class="NishNails">
+                    <div>
+                        <h2>Nish Nails</h2>
+                        <p>I collaborated with a small business to create their Logo and design.</p>
+                    </div>
+                    <div class="learnMore">
+                        <a href="../projects/UXcase.html">Learn More</a>
+                    </div>
+                </section>
+                
+                <section class="GP">
+                    <div>
+                        <h2>Grant Proposal</h2>
+                        <p>A grant proposal I created for RiseUp Youth Initiatives.</p>
+                    </div>
+                    <div class="learnMore">
+                        <a href="../projects/UXcase.html">Learn More</a>
+                    </div>
+                </section>
+                
+                <section class="ITLCT">
+                    <div>
+                <h2>If These Lands Could Talk</h2>
+                <p>Website collaboration by the Interns of the IFA.</p>
+            </div>
+            <div class="learnMore">
+                <a href="../projects/UXcase.html">Learn More</a>
             </div>
         </section>
-    
-        <section>
+        
+        <section class="reno">
             <div>
-                <h1>Nish Nails</h1>
-                <p>I collaborated with a small business to create their Logo and design.</p>
-                <button class="open-popup" data-project="nish-nails">View Details</button>
-            </div>
-        </section>
-    
-        <section>
-            <div>
-                <h1>Grant Proposal</h1>
-                <p>A grant proposal I created for RiseUp Youth Initiatives.</p>
-                <button class="open-popup" data-project="grant-proposal">View Details</button>
-            </div>
-        </section>
-    
-        <section>
-            <div>
-                <h1>If These Lands Could Talk</h1>
-                <p>This project is a one-pager website collaboration built by the Web-Dev Cohort-2 mentees of the Indigenous Friends Association's ‘IndigiTECH’ program. It was built for the non-profit organization ‘If These Lands Could Talk’ which supports Indigenous communities through allyship and digital stewardship.</p>
-                <button class="open-popup" data-project="if-these-lands-could-talk">View Details</button>
-            </div>
-        </section>
-    
-        <section>
-            <div>
-                <h1>Volunteer Home Renovations</h1>
+                <h2>Volunteer Home Renovations</h2>
                 <p>Home renovations I have completed while giving back to my community.</p>
-                <button class="open-popup" data-project="volunteer-home-renovations">View Details</button>
+            </div>
+            <div class="learnMore">
+                <a href="../projects/UXcase.html">Learn More</a>
             </div>
         </section>
-    
-        <!-- Pop-up containers -->
-        <div id="ux-design-case-study-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-button">&times;</span>
-                <h3>UX Design Case Study</h3>
-                <div>
-                    <p>
-                        A group of Mentees from Indigenous Friends Association's Indigitech Program came together to conduct a case study involving access to traditional knowledge.
-                    </p>
-                </div>
-                <div>
-                    <img src="../Images/UX Case study1.png" alt="picture of the case study.">
-                    <p>
-                        We came together as a group to define what we thought were the biggest issues with access to Traditional Knowledge.
-                    </p>
-                </div>
-                <div>
-                    <img src="../Images/UX Case study2.png" alt="picture of the case study.">
-                    <p>How Might We</p>
-                    <p>
-                        We brainstormed Ideas on solutions to solve this ongoing issue. We decided on ways to gather research, deciding on interviewing participants.
-                    </p>
-                </div>
-                <div>
-                    <img src="../Images/UX Case study3.png" alt="screenshot of the interview questions">
-                    <p>
-                        We conducted youth interviews to gage the best way to deliver access. We came to the realization that online would be the best way to reach as many people as possible.
-                    </p>
-                </div>
-            </div>
-        </div>
-    
-        <div id="nish-nails-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-button">&times;</span>
-                <h3>Nish Nails</h3>
-                <p>
+    </div>
 
-                </p>
-            </div>
+    <!-- Modals for the projects -->
+    <div id="modal-ux" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <section>
+                <div>
+                    <h3>UX Design Case Study</h3>
+                    <div>
+                        <p>
+                            A group of Mentees from Indigenous Friends Association's Indigitech Program came together to conduct a case study involving access to traditional knowledge.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../Images/UX Case study1.png" alt="picture of the case study.">
+                        <p>
+                            We came together as a group to define what we thought were the biggest issues with access to Traditional Knowledge.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../Images/UX Case study2.png" alt="picture of the case study.">
+                        <p>How Might We</p>
+                        <p>
+                            We brainstormed Ideas on solutions to solve this ongoing issue. We decided on ways to gather research, deciding on interviewing participants.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../Images/UX Case study3.png" alt="screenshot of the interview questions">
+                        <p>
+                            We conducted youth interviews to gage the best way to deliver access. We came to the realization that online would be the best way to reach as many people as possible.
+                        </p>
+                </div>
+            </section>
         </div>
-    
-        <div id="grant-proposal-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-button">&times;</span>
-                <h3>Grant Proposal</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
-    
-        <div id="if-these-lands-could-talk-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-button">&times;</span>
-                <h3>If These Lands Could Talk</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
-    
-        <div id="volunteer-home-renovations-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-button">&times;</span>
-                <h3>Volunteer Home Renovations</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
+    </div>
+       
     </main>
     <script src="../script.js"></script>
 </body>

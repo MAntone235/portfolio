@@ -52,39 +52,36 @@ function applyZoomEffect() {
 }
 document.addEventListener('DOMContentLoaded', applyZoomEffect);
 
-// Experience
+// Get all modal elements
+var modals = document.querySelectorAll('.modal');
+var triggers = document.querySelectorAll('.modal-trigger');
+var spans = document.querySelectorAll('.close');
 
-//  buttons, popups, and close buttons
-const openButtons = document.querySelectorAll('.open-popup');
-const popups = document.querySelectorAll('.popup');
-const closeButtons = document.querySelectorAll('.close-button');
-
-//  open the popup
-function openPopup(event) {
-    const projectId = event.target.getAttribute('data-project');
-    document.getElementById(`${projectId}-popup`).style.display = 'flex';
-}
-
-// close the popup
-function closePopup(event) {
-    event.target.closest('.popup').style.display = 'none';
-}
-
-// Add event listeners to open buttons
-openButtons.forEach(button => {
-    button.addEventListener('click', openPopup);
-});
-
-// Add event listeners to close buttons
-closeButtons.forEach(button => {
-    button.addEventListener('click', closePopup);
-});
-
-// Close the popup when clicking outside of the popup content
-popups.forEach(popup => {
-    popup.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            popup.style.display = 'none';
+// Loop through each trigger and attach a click event to open the corresponding modal
+triggers.forEach(function(trigger) {
+    trigger.onclick = function() {
+        var modalId = this.getAttribute('href').substring(1);
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
         }
-    });
+    }
 });
+
+// Loop through each close button and attach a click event to close the modal
+spans.forEach(function(span) {
+    span.onclick = function() {
+        var modal = this.closest('.modal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+});
+
+// Close the modal when clicking anywhere outside of the modal content
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+}
+
