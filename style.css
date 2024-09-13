@@ -309,9 +309,9 @@ h1 {
     font-size: 14px;
     color: white;
     text-align: center;
-    background-color: rgb(33, 114, 114);
+    background-color: rgba(26, 82, 82, 0.856);
     border-radius: 10px;
-    border: 5px solid var(--border-color);
+    border: 5px solid rgb(19, 61, 61);
     margin: 2% 0;
     padding: 2%;
 }
@@ -336,7 +336,7 @@ h1 {
 }
 
 .learnMore {
-    padding: 5%;
+    padding: 3%;
     background-color: var(--border-color);
     border: #707070 solid;
     border-radius: 10px;
@@ -345,6 +345,7 @@ h1 {
 .learnMore a {
     text-decoration: none;
     color: white;
+    font-size: var(--font-size-16);
 }
 
 /* Modal Background */
@@ -363,8 +364,19 @@ h1 {
 }
 
 /* Modal Content */
+
+.uxModal img{
+    width: 30%;
+    height: 30%;
+}
+
+.uxModal h3{
+    text-align: center;
+    color: rgb(33, 114, 114);
+    font-size: var(--font-size-28);
+}
 .modal-content {
-    background-color: #fefefe;
+    background-color: whitesmoke;
     margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
