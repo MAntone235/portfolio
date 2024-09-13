@@ -113,3 +113,23 @@ window.onclick = function(event) {
     }
 }
 
+// Function to apply hover effect to images in the modal
+function applyHoverEffectToModals() {
+    // Select all images within the modals
+    const modalImages = document.querySelectorAll('.modal-content img');
+    
+    modalImages.forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.classList.add('zoom-in'); // Add the zoom-in class on hover
+        });
+
+        img.addEventListener('mouseout', () => {
+            img.classList.remove('zoom-in'); // Remove the zoom-in class when hover ends
+        });
+    });
+}
+
+// Immediately invoke the function to apply hover effects
+applyHoverEffectToModals();
+
+

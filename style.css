@@ -371,11 +371,11 @@ h1 {
 
 /* Modal Content */
 
-
 .modals-style h2{
     text-align: center;
-    color: rgb(33, 114, 114);
-    font-size: var(--font-size-28);
+    color: rgb(17, 58, 58);
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 h3{
@@ -392,18 +392,27 @@ h3{
     width: 90%; 
 }
 
-.uxModal{
-    background-color: var(--textbox-color);
-    border-radius: 10px;
-    margin-top: 4%;
-}
 .uxModal img{
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
 }
 
-.uxModal p{
+/* zoom effect */ 
+.zoom-in {
+    transition: transform 0.3s ease;
+    transform: scale(2.0); 
+}
+
+.uxModal div{
     text-align: center;
+    background-color: var(--textbox-color);
+    border-radius: 10px;
+    padding: 5%;
+    margin: 5%;
+}
+
+.HMW-P{
+    font-size: var(--font-size-18);
 }
 
 /* Close Button */
@@ -431,5 +440,3 @@ h3{
     display: flex;
     flex-direction: row;
 };
-
-
