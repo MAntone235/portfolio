@@ -2,6 +2,7 @@
 :root {
     --textbox-color: rgba(33, 114, 114, 0.664);
     --border-color: rgba(50, 153, 153, 0.664);
+    --hover-color: rgb(14, 44, 44);
     --text-color: black;
     --font-size-16: 16px;
     --font-size-18: 18px;
@@ -327,16 +328,20 @@ h1 {
     margin-top: 30%;
 }
 
+.flex-project .ITLCT p{
+    margin-top: 20%;
+}
+
 .ITLCT .learnMore{
-    margin-top:25%;
+    margin-top:30%;
 }
 
 .reno .learnMore{
-    margin-top: 15%;
+    margin-top: 27%;
 }
 
 .learnMore {
-    padding: 3%;
+    padding: 2%;
     background-color: var(--border-color);
     border: #707070 solid;
     border-radius: 10px;
@@ -347,6 +352,7 @@ h1 {
     color: white;
     font-size: var(--font-size-16);
 }
+
 
 /* Modal Background */
 .modal {
@@ -365,27 +371,44 @@ h1 {
 
 /* Modal Content */
 
+
+.modals-style h2{
+    text-align: center;
+    color: rgb(33, 114, 114);
+    font-size: var(--font-size-28);
+}
+
+h3{
+    text-align: center;
+    color: rgb(19, 63, 63);
+    font-size: var(--font-size-20);
+}
+.modal-content {
+    background-color:rgb(222, 253, 253);
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 90%; 
+}
+
+.uxModal{
+    background-color: var(--textbox-color);
+    border-radius: 10px;
+    margin-top: 4%;
+}
 .uxModal img{
     width: 30%;
     height: 30%;
 }
 
-.uxModal h3{
+.uxModal p{
     text-align: center;
-    color: rgb(33, 114, 114);
-    font-size: var(--font-size-28);
-}
-.modal-content {
-    background-color: whitesmoke;
-    margin: 5% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%; 
 }
 
 /* Close Button */
 .close {
-    color: #aaa;
+    color: #474747;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -393,7 +416,20 @@ h1 {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(1, 107, 112);
     text-decoration: none;
     cursor: pointer;
 }
+
+.ITLCT-flexbox img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 5px;
+}
+.ITLCT-flex{
+    display: flex;
+    flex-direction: row;
+};
+
+

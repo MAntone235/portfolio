@@ -52,6 +52,34 @@ function applyZoomEffect() {
 }
 document.addEventListener('DOMContentLoaded', applyZoomEffect);
 
+// Learn more button effects
+const learnMoreElements = document.querySelectorAll('.learnMore');
+
+// Function for hover effect
+function addHoverEffect(element) {
+  element.addEventListener('mouseover', () => {
+    element.style.transform = 'scale(1.1)';
+    element.style.backgroundColor = 'var(--hover-color)';
+  });
+
+  element.addEventListener('mouseout', () => {
+    element.style.transform = 'scale(1)';
+    element.style.backgroundColor = 'var(--border-color)';
+  });
+
+  element.addEventListener('mousedown', () => {
+    element.style.transform = 'scale(1.05)';
+  });
+
+  element.addEventListener('mouseup', () => {
+    element.style.transform = 'scale(1.1)';
+  });
+}
+
+// Apply hover effect to each 'learnMore' element
+learnMoreElements.forEach(addHoverEffect);
+
+
 // Get all modal elements
 var modals = document.querySelectorAll('.modal');
 var triggers = document.querySelectorAll('.modal-trigger');
