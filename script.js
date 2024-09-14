@@ -144,3 +144,34 @@ function applyHoverEffectToModals() {
 }
 
 applyHoverEffectToModals();
+
+// Your existing JavaScript code...
+
+// Function to add hover effects to icons
+function addIconHoverEffects() {
+    const emailIcon = document.getElementById('email-icon');
+    const linkedinIcon = document.getElementById('linkedin-icon');
+
+    // Add hover effect to the email icon
+    emailIcon.addEventListener('mouseover', () => {
+        emailIcon.style.transform = 'scale(1.2)';
+        emailIcon.style.color = '#ff4500'; // Example color change
+    });
+    emailIcon.addEventListener('mouseout', () => {
+        emailIcon.style.transform = 'scale(1)';
+        emailIcon.style.color = '#333'; // Reset color
+    });
+
+    // Add hover effect to the LinkedIn icon
+    linkedinIcon.addEventListener('mouseover', () => {
+        linkedinIcon.style.transform = 'scale(1.2)';
+        linkedinIcon.style.color = '#0056b3'; // Example color change
+    });
+    linkedinIcon.addEventListener('mouseout', () => {
+        linkedinIcon.style.transform = 'scale(1)';
+        linkedinIcon.style.color = '#0077b5'; // Reset color
+    });
+}
+
+// Call the function to add hover effects after the DOM content is loaded
+document.addEventListener('DOMContentLoaded', addIconHoverEffects);
