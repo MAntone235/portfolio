@@ -371,6 +371,23 @@ h1 {
 
 /* Modal Content */
 
+/* zoom effect */ 
+
+.zoom-in {
+    transition: transform 0.3s ease;
+    transform: scale(1.5); 
+}
+
+.ITLCT-modal .zoom-in {
+    transform: scale(1.3); 
+}
+
+.reno-modal .zoom-in {
+    transform: scale(1.25);
+}
+
+
+/* H2 & H3 style */
 .modals-style h2{
     text-align: center;
     color: rgb(17, 58, 58);
@@ -383,6 +400,8 @@ h3{
     color: rgb(19, 63, 63);
     font-size: var(--font-size-20);
 }
+
+/* Modal popup box style */
 .modal-content {
     background-color:rgb(222, 253, 253);
     margin: 5% auto; 
@@ -392,15 +411,10 @@ h3{
     width: 90%; 
 }
 
+/* UX Case Study style */
 .uxModal img{
     width: 50%;
     height: 50%;
-}
-
-/* zoom effect */ 
-.zoom-in {
-    transition: transform 0.3s ease;
-    transform: scale(2.0); 
 }
 
 .uxModal div{
@@ -414,6 +428,30 @@ h3{
 .HMW-P{
     font-size: var(--font-size-18);
 }
+
+/* Nish Nails Image sizes */
+.NN-modal img{
+    width: 30%;
+    height: 30%;
+}
+
+.reno-modal img{
+    width: 40%;
+    height: 40%;
+}
+
+/* Modal textboxs */
+.NN-modal,
+.GP-modal,
+.ITLCT-modal,
+.reno-modal div{
+    text-align: center;
+    background-color: var(--textbox-color);
+    border-radius: 10px;
+    padding: 5%;
+    margin: 5%;
+}
+
 
 /* Close Button */
 .close {
@@ -430,13 +468,3 @@ h3{
     cursor: pointer;
 }
 
-.ITLCT-flexbox img{
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin: 5px;
-}
-.ITLCT-flex{
-    display: flex;
-    flex-direction: row;
-};

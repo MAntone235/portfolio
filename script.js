@@ -115,21 +115,32 @@ window.onclick = function(event) {
 
 // Function to apply hover effect to images in the modal
 function applyHoverEffectToModals() {
-    // Select all images within the modals
-    const modalImages = document.querySelectorAll('.modal-content img');
+    // Select all modals
+    const modals = document.querySelectorAll('.modal');
     
-    modalImages.forEach(img => {
-        img.addEventListener('mouseover', () => {
-            img.classList.add('zoom-in'); // Add the zoom-in class on hover
-        });
+    modals.forEach(modal => {
+        // Select images within each modal
+        const modalImages = modal.querySelectorAll('.modal-content img');
+        
+        modalImages.forEach(img => {
+            img.addEventListener('mouseover', () => {
+                if (modal.classList.contains('GP-modal')) {
+                } else if (modal.classList.contains('ITLCT-modal')) {
+                    img.classList.add('zoom-in');
+                } else if (modal.classList.contains('reno-modal')) {
+                    img.classList.add('zoom-in');
+                } else {
+                    img.classList.add('zoom-in');
+                }
+            });
 
-        img.addEventListener('mouseout', () => {
-            img.classList.remove('zoom-in'); // Remove the zoom-in class when hover ends
+            img.addEventListener('mouseout', () => {
+                if (!modal.classList.contains('GP-modal')) {
+                    img.classList.remove('zoom-in');
+                }
+            });
         });
     });
 }
 
-// Immediately invoke the function to apply hover effects
 applyHoverEffectToModals();
-
-
