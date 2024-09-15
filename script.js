@@ -1,143 +1,140 @@
 // Nav bar hamburger menu function
 function toggleMenu() {
     const navMenu = document.getElementById('nav-menu');
-    if (navMenu.style.display === 'block') {
-        navMenu.style.display = 'none';
-    } else {
-        navMenu.style.display = 'block';
+    if (navMenu) {
+        if (navMenu.style.display === 'block') {
+            navMenu.style.display = 'none';
+        } else {
+            navMenu.style.display = 'block';
+        }
     }
 }
 
-// funtion for the zoom larger text box
+// Function for the zoom larger text box
 document.addEventListener('DOMContentLoaded', () => {
     const descElement = document.querySelector('.desc');
-
-    function startZoomAnimation() {
-        descElement.classList.add('zoom-end');
-
-        setTimeout(() => {
-            descElement.classList.remove('zoom-end');
-        }, 1000); 
+    if (descElement) {
+        function startZoomAnimation() {
+            descElement.classList.add('zoom-end');
+            setTimeout(() => {
+                descElement.classList.remove('zoom-end');
+            }, 1000);
+        }
+        startZoomAnimation();
     }
-    // Start the animation
-    startZoomAnimation();
 });
 
-// popout text box function
+// Popup functions
 function openPopup() {
-    document.getElementById('popup').style.display = 'flex';
+    const popup = document.getElementById('popup');
+    if (popup) {
+        popup.style.display = 'flex';
+    }
 }
 
 function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-
-//close the popup
-window.onclick = function(event) {
-    if (event.target === document.getElementById('popup')) {
-        closePopup();
+    const popup = document.getElementById('popup');
+    if (popup) {
+        popup.style.display = 'none';
     }
 }
 
+// Close the popup when clicking outside of the modal content
+window.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup');
+    if (popup && event.target === popup) {
+        closePopup();
+    }
+});
 
-// function for the zoom smaller portfolio picture
-function applyZoomEffect() {
+// Function for the zoom effect on the portfolio picture
+document.addEventListener('DOMContentLoaded', () => {
     const img = document.querySelector('.hero-section img');
-    
-    img.classList.add('zoom-in');
-    
-    setTimeout(() => {
-        img.classList.remove('zoom-in');
-    }, 2000);
-}
-document.addEventListener('DOMContentLoaded', applyZoomEffect);
+    if (img) {
+        img.classList.add('zoom-in');
+        setTimeout(() => {
+            img.classList.remove('zoom-in');
+        }, 2000);
+    }
+});
 
 // Learn more button effects
 const learnMoreElements = document.querySelectorAll('.learnMore');
 
-// Function for hover effect
 function addHoverEffect(element) {
-  element.addEventListener('mouseover', () => {
-    element.style.transform = 'scale(1.1)';
-    element.style.backgroundColor = 'var(--hover-color)';
-  });
+    element.addEventListener('mouseover', () => {
+        element.style.transform = 'scale(1.1)';
+        element.style.backgroundColor = 'var(--hover-color)';
+    });
 
-  element.addEventListener('mouseout', () => {
-    element.style.transform = 'scale(1)';
-    element.style.backgroundColor = 'var(--border-color)';
-  });
+    element.addEventListener('mouseout', () => {
+        element.style.transform = 'scale(1)';
+        element.style.backgroundColor = 'var(--border-color)';
+    });
 
-  element.addEventListener('mousedown', () => {
-    element.style.transform = 'scale(1.05)';
-  });
+    element.addEventListener('mousedown', () => {
+        element.style.transform = 'scale(1.05)';
+    });
 
-  element.addEventListener('mouseup', () => {
-    element.style.transform = 'scale(1.1)';
-  });
+    element.addEventListener('mouseup', () => {
+        element.style.transform = 'scale(1.1)';
+    });
 }
 
 // Apply hover effect to each 'learnMore' element
 learnMoreElements.forEach(addHoverEffect);
 
+// Modal handling
+function handleModals() {
+    const modals = document.querySelectorAll('.modal');
+    const triggers = document.querySelectorAll('.modal-trigger');
+    const spans = document.querySelectorAll('.close');
 
-// Get all modal elements
-var modals = document.querySelectorAll('.modal');
-var triggers = document.querySelectorAll('.modal-trigger');
-var spans = document.querySelectorAll('.close');
+    // Open modal
+    triggers.forEach(function(trigger) {
+        trigger.addEventListener('click', function(event) {
+            event.preventDefault();
+            const modalId = this.getAttribute('href').substring(1);
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    });
 
-// Loop through each trigger and attach a click event to open the corresponding modal
-triggers.forEach(function(trigger) {
-    trigger.onclick = function() {
-        var modalId = this.getAttribute('href').substring(1);
-        var modal = document.getElementById(modalId);
-        if (modal) {
-            modal.style.display = 'block';
+    // Close modal
+    spans.forEach(function(span) {
+        span.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
         }
-    }
-});
-
-// Loop through each close button and attach a click event to close the modal
-spans.forEach(function(span) {
-    span.onclick = function() {
-        var modal = this.closest('.modal');
-        if (modal) {
-            modal.style.display = 'none';
-        }
-    }
-});
-
-// Close the modal when clicking anywhere outside of the modal content
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
+    });
 }
+
+handleModals();
 
 // Function to apply hover effect to images in the modal
 function applyHoverEffectToModals() {
-    // Select all modals
     const modals = document.querySelectorAll('.modal');
-    
+
     modals.forEach(modal => {
-        // Select images within each modal
         const modalImages = modal.querySelectorAll('.modal-content img');
-        
         modalImages.forEach(img => {
             img.addEventListener('mouseover', () => {
-                if (modal.classList.contains('GP-modal')) {
-                } else if (modal.classList.contains('ITLCT-modal')) {
-                    img.classList.add('zoom-in');
-                } else if (modal.classList.contains('reno-modal')) {
-                    img.classList.add('zoom-in');
-                } else {
-                    img.classList.add('zoom-in');
-                }
+                img.classList.add('zoom-in');
             });
 
             img.addEventListener('mouseout', () => {
-                if (!modal.classList.contains('GP-modal')) {
-                    img.classList.remove('zoom-in');
-                }
+                img.classList.remove('zoom-in');
             });
         });
     });
@@ -145,33 +142,32 @@ function applyHoverEffectToModals() {
 
 applyHoverEffectToModals();
 
-// Your existing JavaScript code...
-
 // Function to add hover effects to icons
 function addIconHoverEffects() {
     const emailIcon = document.getElementById('email-icon');
     const linkedinIcon = document.getElementById('linkedin-icon');
 
-    // Add hover effect to the email icon
-    emailIcon.addEventListener('mouseover', () => {
-        emailIcon.style.transform = 'scale(1.2)';
-        emailIcon.style.color = '#ff4500'; // Example color change
-    });
-    emailIcon.addEventListener('mouseout', () => {
-        emailIcon.style.transform = 'scale(1)';
-        emailIcon.style.color = '#333'; // Reset color
-    });
+    if (emailIcon) {
+        emailIcon.addEventListener('mouseover', () => {
+            emailIcon.style.transform = 'scale(1.2)';
+            emailIcon.style.color = '#ff4500'; 
+        });
+        emailIcon.addEventListener('mouseout', () => {
+            emailIcon.style.transform = 'scale(1)';
+            emailIcon.style.color = '#333'; 
+        });
+    }
 
-    // Add hover effect to the LinkedIn icon
-    linkedinIcon.addEventListener('mouseover', () => {
-        linkedinIcon.style.transform = 'scale(1.2)';
-        linkedinIcon.style.color = '#0056b3'; // Example color change
-    });
-    linkedinIcon.addEventListener('mouseout', () => {
-        linkedinIcon.style.transform = 'scale(1)';
-        linkedinIcon.style.color = '#0077b5'; // Reset color
-    });
+    if (linkedinIcon) {
+        linkedinIcon.addEventListener('mouseover', () => {
+            linkedinIcon.style.transform = 'scale(1.2)';
+            linkedinIcon.style.color = '#0056b3'; 
+        });
+        linkedinIcon.addEventListener('mouseout', () => {
+            linkedinIcon.style.transform = 'scale(1)';
+            linkedinIcon.style.color = '#07a4f8'; 
+        });
+    }
 }
 
-// Call the function to add hover effects after the DOM content is loaded
 document.addEventListener('DOMContentLoaded', addIconHoverEffects);
