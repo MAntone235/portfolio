@@ -171,3 +171,52 @@ function addIconHoverEffects() {
 }
 
 document.addEventListener('DOMContentLoaded', addIconHoverEffects);
+
+
+// Flip for resume page
+const flipBox = document.querySelector('.flip-box');
+if (flipBox) {
+  flipBox.addEventListener('click', () => {
+    flipBox.classList.toggle('flipped');
+  });
+}
+
+
+const resumeLink = document.querySelector('.resumeLink a');
+
+if (resumeLink) {
+    resumeLink.addEventListener('click', function(event) {
+
+        event.preventDefault();
+
+
+        this.classList.toggle('clicked');
+        
+
+        window.open(this.href, '_blank');
+    });
+}
+
+// Function to apply dark mode based on system preference or saved choice
+function applyTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemPreference ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Call the function to apply the theme
+applyTheme();
+
+// Monitor system preference changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    if (!localStorage.getItem('theme')) {
+        const newTheme = event.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+    }
+});
+
+// Save the user's choice (if any) to localStorage when changed
+document.documentElement.addEventListener('change', () => {
+    localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
+});
