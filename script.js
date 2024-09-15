@@ -122,25 +122,38 @@ function handleModals() {
 
 handleModals();
 
-// Function to apply hover effect to images in the modal
+// Function to apply hover effect to images in the modal, excluding ITLCT-Flex
 function applyHoverEffectToModals() {
     const modals = document.querySelectorAll('.modal');
 
     modals.forEach(modal => {
         const modalImages = modal.querySelectorAll('.modal-content img');
         modalImages.forEach(img => {
-            img.addEventListener('mouseover', () => {
-                img.classList.add('zoom-in');
-            });
+            
+            if (!img.closest('.ITLCT-Flex')) {
+                img.addEventListener('mouseover', () => {
+                    img.classList.add('zoom-in');
+                });
 
-            img.addEventListener('mouseout', () => {
-                img.classList.remove('zoom-in');
-            });
+                img.addEventListener('mouseout', () => {
+                    img.classList.remove('zoom-in');
+                });
+            }
         });
     });
 }
 
+// Apply the click event listener to ITLCT-Flex items
+document.querySelectorAll('.ITLCT-Flex .item').forEach(item => {
+    item.addEventListener('click', function() {
+      
+        this.classList.toggle('active');
+    });
+});
+
+
 applyHoverEffectToModals();
+
 
 // Function to add hover effects to icons
 function addIconHoverEffects() {
