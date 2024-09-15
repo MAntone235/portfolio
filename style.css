@@ -417,12 +417,18 @@ h3{
     color: white;
     border-radius: 10px;
     border: 2px solid rgb(14, 44, 44);
+    padding: 2% 0;
 }
 
+.uxModal .link-flex div{
+    margin: 2%;
+    padding: 3%;
+}
 .button:hover {
     background-color: rgb(151, 213, 216);
-    color: rgb(14, 44, 44);S
+    color: rgb(14, 44, 44);
 }
+
 /* ITLCT Style */
 .ITLCT-Flex {
     display: grid;
