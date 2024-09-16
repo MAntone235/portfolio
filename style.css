@@ -502,8 +502,6 @@ h3{
 }
 
 /* STYLE FOR RESUME PAGE */
-
-
 .resume-main{
     background-image: url(./Images/background.jpg);
     background-size: cover;
@@ -881,18 +879,28 @@ footer{
     }
 }
 
-/* Responsive Design */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .menu-container {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    .hamburger-menu{
+        margin: 1%;
+    }
     .nav-menu {
         width: 100%;
         top: 50px;
     }
 
+    h1 {
+        position: absolute;
+        font-size: 30px;
+        margin-left: 38%;
+        padding-right: 0;
+    }
+    /* Homepage design */
     .desc {
         margin: 7% 5% 2% 5%;
         padding: 2%;
@@ -901,40 +909,91 @@ footer{
 
     .hero-section img {
         max-height: 250px;
+        float: none;
+        margin-left: 35%;
     }
 
     .hero-section {
         padding: 10% 5% 15% 5%;
     }
 
-    h1 {
-        font-size: 30px;
-        padding-right: 20%;
-    }
 
     .about-button {
         font-size: var(--font-size-16);
     }
 
-    .flex-project section {
-        max-width: 100%;
+    .popup-content{
+        margin-top: 70%;
     }
 
+    /* Experience page */
+    .exP{
+        margin: 2%;
+        padding: 2%;
+    }
+    .flex-project section {
+        max-width: 40%;
+    }
+
+    .flex-project .ITLCT p{
+        margin-top: 10%;
+    }
+
+    .ux .learnMore{
+        margin-top: 5%;
+    }
+    
+    .NishNails .learnMore{
+        margin-top: 32%;
+    }
+    .GP .learnMore{
+        margin-top: 23%;
+    }
+    
+    
+    .ITLCT .learnMore{
+        margin-top:10%;
+    }
+    
+    .reno .learnMore{
+        margin-top: 10%;
+    }
     .modal-content {
         width: 90%;
     }
+
+    .GP-modal img{
+        width: 30%;
+        height: 30%;
+    }
+    
+    /* Resume Page */
+    .resume-main img{
+        margin-left: 5%;
+    } 
+
+    /* Contact page */
+    .h1{
+        margin-left: 40%;
+    }
 }
 
+/* Responsive design for 390px */
 @media (max-width: 390px) {
     h1 {
+        position: absolute;
         font-size: 24px;
-        padding-right: 10%;
+        margin-left: 30%;
     }
 
+    /* Homepage style */
     .hero-section img {
-        max-height: 200px;
+        max-height: 250px;
+        float: none;
+        margin-left: 15%;
+        margin-top: 10%;
     }
-
+    
     .desc {
         margin: 5% 3% 2% 3%;
         font-size: var(--font-size-16);
@@ -944,11 +1003,87 @@ footer{
         font-size: var(--font-size-14);
     }
 
+    /* Experience Page */
+    .exMain{
+        height: 100%; 
+    }
+
+    .exP{
+        font-size: var(--font-size-14);
+        margin-top: 10%;
+    }
+
     .flex-project section {
         max-width: 100%;
+        font-size: 10px;
+        padding: 5%;
+    }
+
+    .flex-project .GP{
+       padding: 5% 25%;
+    }
+
+    .flex-project .ITLCT{
+        padding: 5% 25%;
+    }
+    .ux .learnMore{
+        margin-top: 0;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
+    .NishNails .learnMore{
+        margin-top: 0;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .GP .learnMore{
+        margin-top: 0;
+    }
+    
+    .ITLCT .learnMore{
+        margin-top:0;
+    }
+    
+    .reno .learnMore{
+        margin-top: 0;
+        margin-left: 25%;
+        margin-right: 25%;
     }
 
     .modal-content {
-        width: 100%;
+        width: 80%;
+    }
+
+    /* Resume Page */
+    .flipResume{
+        margin-top: 10%;
+        font-size: var(--font-size-14);
+    }
+    .resume-main img{
+        margin-left: 0%;
+        width: 300px;
+    } 
+
+    /* Contact Page */
+    .contact-main{
+        height: 100%;
+    }
+
+    .h1{
+        margin-left: 30%;
+    }
+
+    .contact-info{
+        margin-top: 20%;
+    }
+
+    .contact-flex{
+        margin-left: 28%;
+    }
+
+    .email-form{
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
