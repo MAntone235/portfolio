@@ -10,6 +10,22 @@ function toggleMenu() {
     }
 }
 
+// Keyboard interaction for the hamburger menu
+function handleHamburgerMenu() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') { 
+                event.preventDefault();
+                toggleMenu();
+            }
+        });
+    }
+}
+
+// Immediately invoke handleHamburgerMenu function
+handleHamburgerMenu();
+
 // Function for the zoom larger text box
 document.addEventListener('DOMContentLoaded', () => {
     const descElement = document.querySelector('.desc');
@@ -29,6 +45,7 @@ function openPopup() {
     const popup = document.getElementById('popup');
     if (popup) {
         popup.style.display = 'flex';
+        popup.setAttribute('aria-hidden', 'false');
     }
 }
 
@@ -36,6 +53,7 @@ function closePopup() {
     const popup = document.getElementById('popup');
     if (popup) {
         popup.style.display = 'none';
+        popup.setAttribute('aria-hidden', 'true');
     }
 }
 
@@ -129,7 +147,6 @@ function applyHoverEffectToModals() {
     modals.forEach(modal => {
         const modalImages = modal.querySelectorAll('.modal-content img');
         modalImages.forEach(img => {
-            
             if (!img.closest('.ITLCT-Flex')) {
                 img.addEventListener('mouseover', () => {
                     img.classList.add('zoom-in');
@@ -146,20 +163,19 @@ function applyHoverEffectToModals() {
 // Apply the click event listener to ITLCT-Flex items
 document.querySelectorAll('.ITLCT-Flex .item').forEach(item => {
     item.addEventListener('click', function() {
-      
         this.classList.toggle('active');
     });
 });
 
-
 applyHoverEffectToModals();
-
 
 // Function to add hover effects to icons
 function addIconHoverEffects() {
-    const emailIcon = document.getElementById('email-icon');
-    const linkedinIcon = document.getElementById('linkedin-icon');
+    const emailIcon = document.querySelector('.email-icon');
+    const linkedinIcon = document.querySelector('.linkedin-icon');
+    const githubIcon = document.querySelector('.github-icon');
 
+    // Apply hover effects to email icon
     if (emailIcon) {
         emailIcon.addEventListener('mouseover', () => {
             emailIcon.style.transform = 'scale(1.2)';
@@ -167,10 +183,11 @@ function addIconHoverEffects() {
         });
         emailIcon.addEventListener('mouseout', () => {
             emailIcon.style.transform = 'scale(1)';
-            emailIcon.style.color = '#333'; 
+            emailIcon.style.color = 'rgb(79, 250, 250)';
         });
     }
 
+    // Apply hover effects to LinkedIn icon
     if (linkedinIcon) {
         linkedinIcon.addEventListener('mouseover', () => {
             linkedinIcon.style.transform = 'scale(1.2)';
@@ -179,6 +196,18 @@ function addIconHoverEffects() {
         linkedinIcon.addEventListener('mouseout', () => {
             linkedinIcon.style.transform = 'scale(1)';
             linkedinIcon.style.color = '#07a4f8'; 
+        });
+    }
+
+    // Apply hover effects to GitHub icon
+    if (githubIcon) {
+        githubIcon.addEventListener('mouseover', () => {
+            githubIcon.style.transform = 'scale(1.2)';
+            githubIcon.style.color = '#a2a2d0'; 
+        });
+        githubIcon.addEventListener('mouseout', () => {
+            githubIcon.style.transform = 'scale(1)';
+            githubIcon.style.color = '#4646f1';
         });
     }
 }
@@ -194,18 +223,11 @@ if (flipBox) {
   });
 }
 
-
 const resumeLink = document.querySelector('.resumeLink a');
-
 if (resumeLink) {
     resumeLink.addEventListener('click', function(event) {
-
         event.preventDefault();
-
-
         this.classList.toggle('clicked');
-        
-
         window.open(this.href, '_blank');
     });
 }

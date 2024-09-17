@@ -13,18 +13,25 @@
   <body class="contact-body">
     <header>
       <div class="menu-container">
-        <div class="hamburger-menu" onclick="toggleMenu()">
+        <div
+          class="hamburger-menu"
+          onclick="toggleMenu()"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-        <h1 class="h1">Contact</h1>
-        <nav id="nav-menu" class="nav-menu">
+        <h1 class="CH1">Contact</h1>
+        <nav id="nav-menu" class="nav-menu" aria-hidden="true">
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./experience.html">Experience</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="../otherpages/experience.html">Experience</a></li>
+            <li><a href="../otherpages/resume.html">Resume</a></li>
+            <li><a href="../otherpages/contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -36,19 +43,19 @@
             <p>London, Ontario</p>
             <p>(519) 614-7598</p>
             <div class="contact-flex">
-                <a href="mailto:margaretantone17@gmail.com" class="email-icon">
-                <i class="fas fa-envelope"></i>
-                </a>
-                <p>
-                <a
-                href="https://www.linkedin.com/in/margaret-antone"
-                target="_blank"
-                class="linkedin-icon"
-                >
-                <i class="fab fa-linkedin"></i>
-                </a>
-                </p>
-            </div>   
+              <a href="mailto:margaretantone17@gmail.com" class="email-icon" aria-label="Email Margaret Antone">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/margaret-antone" target="_blank" class="linkedin-icon" aria-label="Margaret Antone's LinkedIn Profile">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+
+              <a href="https://github.com/MAntone235" target="_blank" class="github-icon" aria-label="Margaret Antone's Github Profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+          
         </div>
 
         <div class="email-form">

@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
-    <script src="./script.js"></script>
   </head>
 
   <body>
     <header>
       <div class="menu-container">
-        <div class="hamburger-menu" onclick="toggleMenu()">
+        <div
+          class="hamburger-menu"
+          onclick="toggleMenu()"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
         <h1>Margaret Antone</h1>
-        <nav id="nav-menu" class="nav-menu">
+        <nav id="nav-menu" class="nav-menu" aria-hidden="true">
           <ul>
             <li><a href="./otherpages/experience.html">Experience</a></li>
             <li><a href="./otherpages/resume.html">Resume</a></li>
@@ -45,14 +49,34 @@
             A passionate Graphic Designer & Digital Artist, UI/UX enthusiast,
             specializing in designing and creating.
           </p>
-          <button class="about-button" onclick="openPopup()">About Me</button>
+          <button
+            class="about-button"
+            onclick="openPopup()"
+            aria-haspopup="dialog"
+            aria-controls="popup"
+          >
+            About Me
+          </button>
         </div>
       </section>
 
-      <div id="popup" class="popup">
+      <div
+        id="popup"
+        class="popup"
+        role="dialog"
+        aria-labelledby="popup-title"
+        aria-hidden="true"
+      >
         <div class="popup-content">
-          <span class="close-button" onclick="closePopup()">&times;</span>
-          <h2>About Me</h2>
+          <span
+            class="close-button"
+            onclick="closePopup()"
+            aria-label="Close"
+            tabindex="0"
+            >&times;</span
+          >
+
+          <h2 id="popup-title">About Me</h2>
           <p>
             Hi, I'm Margaret Antone, a passionate Graphic Designer & Digital
             Artist with a love for creating engaging visual content, based out
@@ -81,5 +105,6 @@
         </div>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -9,18 +9,25 @@
   <body class="exBody">
     <header>
       <div class="menu-container">
-        <div class="hamburger-menu" onclick="toggleMenu()">
+        <div
+          class="hamburger-menu"
+          onclick="toggleMenu()"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
         <h1>Experience</h1>
-        <nav id="nav-menu" class="nav-menu">
+        <nav id="nav-menu" class="nav-menu" aria-hidden="true">
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./experience.html">Experience</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="../otherpages/experience.html">Experience</a></li>
+            <li><a href="../otherpages/resume.html">Resume</a></li>
+            <li><a href="../otherpages/contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -166,11 +173,11 @@
                 </p>
                 <img
                 src="../Images/Casestudy screenshoot 1.png"
-                alt="Screenshot of case study"
+                alt="case study"
                 />
                 <img
                 src="../Images/Casestudy screenshot.png"
-                alt="Screenshot of case study"
+                alt="another part of case study "
                 />
               </div>
               <div class="link-flex">
@@ -275,7 +282,7 @@
                 <a href="https://docs.google.com/document/d/1cKcKDD7NkFITKCskQ6wv4PHiYbbxjyxfbQEWY21I9Ng/edit?usp=sharing" target="_blank">
                   <img
                   src="../Images/RiseUp.png"
-                  alt="Image of the Grant Proposal"
+                  alt="Grant Proposal front page"
                   />
                 </a>
                 <!-- Link to the PDF of the Grant Proposal -->
@@ -351,7 +358,7 @@
                   <p>
                     Using the Figma file as a guide as a team we got started on creating each page individually dividing each one out. I worked on the Our Teams page. 
                   </p>
-                  <img src="../Images/OurTeams Page.png" alt="Image of the webpages Our Teams page">
+                  <img src="../Images/OurTeams Page.png" alt="Our Teams page">
                   <p>
                     Along with collaborating with the other interns. Using Github we brought the project to life. 
                   </p>
@@ -377,7 +384,7 @@
               <p>
                 I emptied the space out and allowing me to design the two rooms. I started with the framing wall to divide the room into two. Then I started to lay the subfloor.
               </p>
-              <img src="../Images/home reno 1.jpg" alt="Wall framing and subfloor image">
+              <img src="../Images/home reno 1.jpg" alt="Wall framing and subfloor">
             </div>
             <div>
               <h3>Drywall & Flooring</h3>
@@ -388,7 +395,7 @@
                       <img src="../Images/home reno 4.jpg" alt="Drywall completed in other room">
                       <img src="../Images/home reno 3.jpg" alt="Flooring completed">
                       <img src="../Images/home reno 5.jpg" alt="Flooring in other room">
-                      <img src="../Images/home reno 6.jpg" alt="Flooring and drywall">
+                      <img src="../Images/home reno 6.jpg" alt="Floor and drywall">
                       <img src="../Images/home reno 7.jpg" alt="Flooring and drywall">
                     </div>
                     <div>

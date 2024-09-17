@@ -111,6 +111,11 @@ h1 {
     padding-right: 45%;
 }
 
+/* Contact page H1 */
+.CH1{
+    padding-right: 45%;
+}
+
 /* Styles for images in the hero section */
 .hero-section img {
     float: left;
@@ -237,6 +242,18 @@ h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.hamburger-menu:focus,
+.close-button:focus {
+  outline: 2px solid #000; 
+}
+
+.hamburger-menu:focus {
+  outline: 3px solid #007bff;
+}
+
+.close-button:focus {
+  outline: 3px solid #ff0000;
+}
 
 /* EXPERIENCE PAGE */
 /* styling for Experience paragraph */
@@ -645,7 +662,7 @@ footer{
   .contact-flex{
     display: flex;
     flex-direction: row;
-    margin-left: 43.5%;
+    margin-left: 38%;
   }
 
 .h1{
@@ -1051,8 +1068,18 @@ footer{
         margin-right: 25%;
     }
 
+    .link-flex {
+        font-size: 10px;
+    }
+
     .modal-content {
         width: 80%;
+        font-size: 12px;
+    }
+
+    .modal-content img{
+        width: 90%;
+        height: 90%;
     }
 
     /* Resume Page */
