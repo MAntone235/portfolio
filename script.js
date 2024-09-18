@@ -255,3 +255,4 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
 document.documentElement.addEventListener('change', () => {
     localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
 });
+
