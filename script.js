@@ -215,34 +215,33 @@ applyHoverEffectToModals();
 
 // Function to add hover effects to icons
 function addIconHoverEffects() {
-    const emailIcon = document.getElementById('email-icon');
-    const linkedinIcon = document.getElementById('linkedin-icon');
+    const emailIcon = document.querySelector('.email-icon');
+    const linkedinIcon = document.querySelector('.linkedin-icon');
     const githubIcon = document.querySelector('.github-icon');
     
+    const iconHoverEffect = (icon, hoverColor, defaultColor) => {
+        icon.addEventListener('mouseover', () => {
+            icon.style.transform = 'scale(1.2)';
+            icon.style.color = hoverColor;
+        });
+        icon.addEventListener('mouseout', () => {
+            icon.style.transform = 'scale(1)';
+            icon.style.color = defaultColor;
+        });
+    };
+    
     if (emailIcon) {
-        emailIcon.addEventListener('mouseover', () => {
-            emailIcon.style.transform = 'scale(1.2)';
-            emailIcon.style.color = '#ff4500';
-        });
-        emailIcon.addEventListener('mouseout', () => {
-            emailIcon.style.transform = 'scale(1)';
-            emailIcon.style.color = '#333';
-        });
+        iconHoverEffect(emailIcon, '#ff4500', 'rgb(151, 213, 216)');
     }
-
     if (linkedinIcon) {
-        linkedinIcon.addEventListener('mouseover', () => {
-            linkedinIcon.style.transform = 'scale(1.2)';
-            linkedinIcon.style.color = '#0056b3';
-        });
-        linkedinIcon.addEventListener('mouseout', () => {
-            linkedinIcon.style.transform = 'scale(1)';
-            linkedinIcon.style.color = '#07a4f8';
-        });
+        iconHoverEffect(linkedinIcon, '#0056b3', 'rgb(98, 183, 240)');
+    }
+    if (githubIcon) {
+        iconHoverEffect(githubIcon, 'rgb(118, 2, 250)', 'rgb(177, 89, 248)');
     }
 }
 
-document.addEventListener('DOMContentLoaded', addIconHoverEffects);
+addIconHoverEffects();
 
 
 // Flip for resume page

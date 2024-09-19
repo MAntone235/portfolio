@@ -641,7 +641,7 @@ footer{
     box-sizing: border-box; 
 }
 
-/* Style for LinkedIn Icon */
+/* Styling for Icons */
 .linkedin-icon {
     display: inline-flex;
     align-items: center;
@@ -655,7 +655,7 @@ footer{
     margin-right: 0.5em;
   }
   
-  /* Style for Email Icon */
+  
   .email-icon {
     display: inline-flex;
     align-items: center;
@@ -669,6 +669,7 @@ footer{
     margin-right: 0.5em;
   }
 
+  /* styling for contact info */
   .contact-info{
     background-color: var(--textbox-color);
     border-radius: 10px;
