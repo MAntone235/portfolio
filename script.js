@@ -226,8 +226,8 @@ imgElements.forEach(img => {
 
         fullImageDiv.addEventListener('wheel', (event) => {
             event.preventDefault();
-            scale += event.deltaY * -0.01; // Zoom factor
-            scale = Math.min(Math.max(1, scale), 3); // Limit zoom level
+            scale += event.deltaY * -0.01; 
+            scale = Math.min(Math.max(1, scale), 3); 
             zoomableImg.style.transform = `scale(${scale})`;
         });
 
@@ -236,7 +236,6 @@ imgElements.forEach(img => {
         });
     });
 });
-
 
 // Existing zoom effect code for descElement
 const descElement = document.querySelector('.desc');
