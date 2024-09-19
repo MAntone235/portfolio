@@ -23,7 +23,6 @@ function handleHamburgerMenu() {
     }
 }
 
-// Immediately invoke handleHamburgerMenu function
 handleHamburgerMenu();
 
 // Function for the zoom larger text box
@@ -99,7 +98,6 @@ function addHoverEffect(element) {
     });
 }
 
-// Apply hover effect to each 'learnMore' element
 learnMoreElements.forEach(addHoverEffect);
 
 // Modal handling
@@ -184,7 +182,7 @@ window.addEventListener('click', function (event) {
     });
 });
 
-// Function to apply hover effect to images in the modal, excluding ITLCT-Flex
+// Apply hover effect to images in the modal, excluding ITLCT-Flex
 function applyHoverEffectToModals() {
     const modals = document.querySelectorAll('.modal');
 
@@ -269,7 +267,6 @@ function applyTheme() {
     document.documentElement.setAttribute('data-theme', theme);
 }
 
-// Call the function to apply the theme
 applyTheme();
 
 // Monitor system preference changes
@@ -280,7 +277,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
     }
 });
 
-// Save the user's choice (if any) to localStorage when changed
 document.documentElement.addEventListener('change', () => {
     localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
 });

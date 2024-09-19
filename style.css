@@ -154,6 +154,7 @@ h1 {
     background-color: var(--textbox-color);
     border-radius: 10px;
     border:5px solid  var(--border-color) ;
+    line-height: 2;
     margin: 7% 8% 2% 50%;
     padding-bottom: 2%;
     transform: scale(1.2); 
@@ -192,7 +193,7 @@ h1 {
     background-color: rgba(0,0,0,0.4); 
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
+    padding-top: 12%;
 }
 
 /* Popup content */
@@ -201,10 +202,11 @@ h1 {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: var(--font-size-20);
+    line-height: 1.7;
 }
 
 /* The close button */
@@ -242,17 +244,12 @@ h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.hamburger-menu:focus,
-.close-button:focus {
-  outline: 2px solid #000; 
-}
-
 .hamburger-menu:focus {
-  outline: 3px solid #007bff;
+  outline: 3px solid rgb(57, 233, 233);
 }
 
 .close-button:focus {
-  outline: 3px solid #ff0000;
+  outline: 3px solid rgb(19, 70, 70);
 }
 
 /* EXPERIENCE PAGE */
@@ -645,7 +642,7 @@ footer{
 .linkedin-icon {
     display: inline-flex;
     align-items: center;
-    color: #025886; /* LinkedIn blue color */
+    color: #025886; 
     text-decoration: none;
     margin-right: 0.5em;
   }
@@ -920,6 +917,7 @@ footer{
 }
 
 /* RESPONSIVE DESIGN */
+/* max width 768px */
 @media (max-width: 768px) {
     .menu-container {
         flex-direction: column;
@@ -967,6 +965,9 @@ footer{
     }
 
     /* Experience page */
+    .exMain{
+        height: 100%;
+    }
     .exP{
         margin: 2%;
         padding: 2%;
@@ -1008,6 +1009,11 @@ footer{
     }
     
     /* Resume Page */
+    .resume-main{
+        height: 100%;
+        padding-bottom: 120%;
+    }
+
     .resume-main img{
         margin-left: 5%;
     } 
@@ -1059,36 +1065,8 @@ footer{
         padding: 5%;
     }
 
-    .flex-project .GP{
-       padding: 5% 25%;
-    }
-
-    .flex-project .ITLCT{
-        padding: 5% 25%;
-    }
-    .ux .learnMore{
-        margin-top: 0;
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-    
-    .NishNails .learnMore{
-        margin-top: 0;
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-    .GP .learnMore{
-        margin-top: 0;
-    }
-    
-    .ITLCT .learnMore{
-        margin-top:0;
-    }
-    
-    .reno .learnMore{
-        margin-top: 0;
-        margin-left: 25%;
-        margin-right: 25%;
+    .flip-box1{
+        max-width: 100%;
     }
 
     .link-flex {
