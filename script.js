@@ -140,6 +140,50 @@ function handleModals() {
 
 handleModals();
 
+// Flip box functionality
+const flipBoxes = document.querySelectorAll('.flip-box1');
+
+flipBoxes.forEach(box => {
+    box.addEventListener('click', function () {
+        const inner = box.querySelector('.flip-box-inner1');
+        inner.classList.toggle('flipped');
+    });
+});
+
+// Modal functionality
+const modalTriggers = document.querySelectorAll('.modal-trigger');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.close');
+
+// Open modals
+modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        const modalId = this.getAttribute('href'); 
+        const modal = document.querySelector(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+        }
+    });
+});
+
+// Close modals
+closeButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const modal = this.closest('.modal');
+        modal.style.display = 'none'; 
+    });
+});
+
+// Close modal when clicking outside of modal content
+window.addEventListener('click', function (event) {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
 // Function to apply hover effect to images in the modal, excluding ITLCT-Flex
 function applyHoverEffectToModals() {
     const modals = document.querySelectorAll('.modal');
@@ -171,43 +215,29 @@ applyHoverEffectToModals();
 
 // Function to add hover effects to icons
 function addIconHoverEffects() {
-    const emailIcon = document.querySelector('.email-icon');
-    const linkedinIcon = document.querySelector('.linkedin-icon');
+    const emailIcon = document.getElementById('email-icon');
+    const linkedinIcon = document.getElementById('linkedin-icon');
     const githubIcon = document.querySelector('.github-icon');
-
-    // Apply hover effects to email icon
+    
     if (emailIcon) {
         emailIcon.addEventListener('mouseover', () => {
             emailIcon.style.transform = 'scale(1.2)';
-            emailIcon.style.color = '#ff4500'; 
+            emailIcon.style.color = '#ff4500';
         });
         emailIcon.addEventListener('mouseout', () => {
             emailIcon.style.transform = 'scale(1)';
-            emailIcon.style.color = 'rgb(79, 250, 250)';
+            emailIcon.style.color = '#333';
         });
     }
 
-    // Apply hover effects to LinkedIn icon
     if (linkedinIcon) {
         linkedinIcon.addEventListener('mouseover', () => {
             linkedinIcon.style.transform = 'scale(1.2)';
-            linkedinIcon.style.color = '#0056b3'; 
+            linkedinIcon.style.color = '#0056b3';
         });
         linkedinIcon.addEventListener('mouseout', () => {
             linkedinIcon.style.transform = 'scale(1)';
-            linkedinIcon.style.color = '#07a4f8'; 
-        });
-    }
-
-    // Apply hover effects to GitHub icon
-    if (githubIcon) {
-        githubIcon.addEventListener('mouseover', () => {
-            githubIcon.style.transform = 'scale(1.2)';
-            githubIcon.style.color = '#a2a2d0'; 
-        });
-        githubIcon.addEventListener('mouseout', () => {
-            githubIcon.style.transform = 'scale(1)';
-            githubIcon.style.color = '#4646f1';
+            linkedinIcon.style.color = '#07a4f8';
         });
     }
 }
