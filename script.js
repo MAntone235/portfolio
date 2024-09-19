@@ -211,6 +211,45 @@ document.querySelectorAll('.ITLCT-Flex .item').forEach(item => {
 
 applyHoverEffectToModals();
 
+// Open image in fullscreen on click
+const imgElements = document.querySelectorAll('.ITLCT-Flex img');
+imgElements.forEach(img => {
+    img.addEventListener('click', function() {
+        const fullImageDiv = document.createElement('div');
+        fullImageDiv.className = 'fullscreen-image';
+        fullImageDiv.innerHTML = `<img src="${this.src}" alt="${this.alt}" class="zoomable" />`;
+        document.body.appendChild(fullImageDiv);
+
+        // Zoom functionality
+        const zoomableImg = fullImageDiv.querySelector('.zoomable');
+        let scale = 1;
+
+        fullImageDiv.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            scale += event.deltaY * -0.01; // Zoom factor
+            scale = Math.min(Math.max(1, scale), 3); // Limit zoom level
+            zoomableImg.style.transform = `scale(${scale})`;
+        });
+
+        fullImageDiv.addEventListener('click', function() {
+            this.remove();
+        });
+    });
+});
+
+
+// Existing zoom effect code for descElement
+const descElement = document.querySelector('.desc');
+if (descElement) {
+    function startZoomAnimation() {
+        descElement.classList.add('zoom-end');
+        setTimeout(() => {
+            descElement.classList.remove('zoom-end');
+        }, 1000);
+    }
+    startZoomAnimation();
+}
+
 // Function to add hover effects to icons
 function addIconHoverEffects() {
     const emailIcon = document.querySelector('.email-icon');
