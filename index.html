@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Margaret Antone's Portfolio</title>
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <script src="./script.js"></script>
-</head>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="menu-container">
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <h1>Margaret Antone</h1>
-            <nav id="nav-menu" class="nav-menu">
-                <ul>
-                    <li><a href="./otherpages/about-me.html">About Me</a></li>
-                    <li><a href="./otherpages/experience.html">Experience</a></li>
-                    <li><a href="./otherpages/resume.html">Resume</a></li>
-                    <li><a href="./otherpages/contact.html">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="menu-container">
+        <div
+          class="hamburger-menu"
+          onclick="toggleMenu()"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+        <h1>Margaret Antone</h1>
+        <nav id="nav-menu" class="nav-menu" aria-hidden="true">
+          <ul>
+            <li><a href="./otherpages/experience.html">Experience</a></li>
+            <li><a href="./otherpages/resume.html">Resume</a></li>
+            <li><a href="./otherpages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-<main>
-    <section class="hero-section">
-
-        <img src="./Images/Portfolio Picture.jpg" alt="picture of Margaret">
+    <main>
+      <section class="hero-section">
+        <img src="./Images/PortfolioPicture.jpg" alt="picture of Margaret" />
         <div class="desc">
-            <h2>Graphic Designer</h2>
-            <p>
-                A passionate Graphic Designer & Digital Artist, UI/UX enthusiast, specializing in designing and creating.
-            </p>
+          <h2>Graphic Designer</h2>
+          <p>
+            A passionate Graphic Designer & Digital Artist, UI/UX enthusiast,
+            specializing in designing and creating.
+          </p>
+          <button
+            class="about-button"
+            onclick="openPopup()"
+            aria-haspopup="dialog"
+            aria-controls="popup"
+          >
+            About Me
+          </button>
         </div>
-    </section>
-</maSin>
-    
-</body>
+      </section>
 
+      <div
+        id="popup"
+        class="popup"
+        role="dialog"
+        aria-labelledby="popup-title"
+        aria-hidden="true"
+      >
+        <div class="popup-content">
+          <span
+            class="close-button"
+            onclick="closePopup()"
+            aria-label="Close"
+            tabindex="0"
+            >&times;</span
+          >
+
+          <h2 id="popup-title">About Me</h2>
+          <p>
+            Hi, I'm Margaret Antone, a passionate Graphic Designer & Digital
+            Artist with a love for creating engaging visual content, based out
+            of London, Ontario. As a mother of 3 with a passion for creative
+            design. My work spans various areas including UI/UX design, digital
+            art, and more. I thrive on turning creative ideas into compelling
+            designs.
+          </p>
+          <p>
+            I want to explore and create in all aspects of life. From creating
+            and designing fun art projects with my children, to bringing my
+            client's ideas to life. I enjoy all aspects of design from start to
+            finish.
+          </p>
+          <p>
+            I am very focused on giving my clients the end results they imagine!
+          </p>
+          <p>
+            I have recently completed the INDIGItech program, a specialized
+            initiative by the Indigenous Friends Association aimed at equipping
+            Indigenous individuals with advanced skills in technology, coding,
+            and digital literacy along with digital art. Currently, I am serving
+            as an intern with the Indigenous Friends Association, where I am
+            furthering my education and honing my expertise in Web Development.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
 </html>

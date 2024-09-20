@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu-container">
+        <div
+          class="hamburger-menu"
+          onclick="toggleMenu()"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <h1>Resume</h1>
+        <nav id="nav-menu" class="nav-menu" aria-hidden="true">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../otherpages/experience.html">Experience</a></li>
+            <li><a href="../otherpages/resume.html">Resume</a></li>
+            <li><a href="../otherpages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="resume-main">
+      <section class="flipResume">
+        <p>Click on resume to load second page!</p>
+      </section>
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../Images/resume pg1.png"
+              alt="First page of Margaret Antone's Resume"
+            />
+          </div>
+          <div class="flip-box-back">
+            <img
+              src="../Images/resume pg 2.png"
+              alt="Second page of Margaret Antone's Resume"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="resumeLink">
+        <a
+          href="https://docs.google.com/document/d/1xx5RVk2ryHc48D6wvbhasC8tq4_ag76UOTBkf3vvFAM/edit?usp=sharing"
+          target="_blank"
+        >
+          Link to Margaret's Resume
+        </a>
+      </section>
+    </footer>
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>

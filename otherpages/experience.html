@@ -1,13 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experience</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="exBody">
+    <header>
+      <div class="menu-container">
+        <div
+          class="hamburger-menu"
+          onclick="toggleMenu()"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <h1>Experience</h1>
+        <nav id="nav-menu" class="nav-menu" aria-hidden="true">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../otherpages/experience.html">Experience</a></li>
+            <li><a href="../otherpages/resume.html">Resume</a></li>
+            <li><a href="../otherpages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="exMain">
+      <section class="exP">
+        <p>
+          With extensive experience in customer service, remote work, web
+          development, graphic design, and management, I bring a well-rounded
+          skill set to diverse professional settings. My customer service
+          background has sharpened my communication and problem-solving
+          abilities, while remote work has enhanced my time management and
+          self-discipline. In web development, I focus on creating user-friendly
+          websites with modern technologies, and my graphic design skills enable
+          me to deliver visually compelling and brand-aligned designs.
+          Additionally, my management experience has strengthened my leadership
+          and organizational capabilities, allowing me to effectively guide
+          teams and oversee projects. These combined skills drive my success in
+          dynamic and fast-paced environments.
+        </p>
+        <p>Below are some of my projects I have completed</p>
+      </section>
+      <div class="flex-project">
+        <div class="flip-box1">
+            <div class="flip-box-inner1">
+                <div class="flip-box-front1">
+                    <h2>UX Design Case Study</h2>
+                </div>
+                <div class="flip-box-back1">
+                    <p>
+                        A case study by a group from Indigitech program created to tackle
+                        lack of access within all Indigenous communities.
+                    </p>
+                    <div class="learnMore">
+                        <a href="#modal-ux" class="modal-trigger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-box1">
+            <div class="flip-box-inner1">
+                <div class="flip-box-front1">
+                    <h2>Nish Nails</h2>
+                </div>
+                <div class="flip-box-back1">
+                    <p>
+                        I collaborated with a small business to create their Logo and design.
+                    </p>
+                    <div class="learnMore">
+                        <a href="#modal-nish" class="modal-trigger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-box1">
+            <div class="flip-box-inner1">
+                <div class="flip-box-front1">
+                    <h2>Grant Proposal</h2>
+                </div>
+                <div class="flip-box-back1">
+                    <p>A grant proposal I created for RiseUp Youth Initiatives.</p>
+                    <div class="learnMore">
+                        <a href="#modal-gp" class="modal-trigger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-box1">
+            <div class="flip-box-inner1">
+                <div class="flip-box-front1">
+                    <h2>If These Lands Could Talk</h2>
+                </div>
+                <div class="flip-box-back1">
+                    <p>Website collaboration by the Interns of IFA.</p>
+                    <div class="learnMore">
+                        <a href="#modal-itlct" class="modal-trigger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-box1">
+            <div class="flip-box-inner1">
+                <div class="flip-box-front1">
+                    <h2>Volunteer Home Renovations</h2>
+                </div>
+                <div class="flip-box-back1">
+                    <p>
+                        Home renovations I have completed while giving back to my community.
+                    </p>
+                    <div class="learnMore">
+                        <a href="#modal-reno" class="modal-trigger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
-</head>
-<body>
+      <!-- Modals for the projects -->
+      <!-- UX Case Study Modal -->
+    <div class="modals-style">
+         <div id="modal-ux" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <section class="uxModal">
+            <div>
+              <h2>UX Design Case Study</h2>
+              <div>
+                <p>
+                  A group of Mentees from Indigenous Friends Association's
+                  Indigitech Program came together to conduct a case study
+                  involving access to traditional knowledge.
+                </p>
+              </div>
+              <div>
+                <p>
+                  We came together as a group to define what we thought were the
+                  biggest issues with access to Traditional Knowledge.
+                </p>
+                <img
+                src="../Images/UX Case study1.png"
+                  alt="picture of the case study."
+                  />
+                </div>
+                <div>
+                <p class="HMW-P">How Might We</p>
+                <p>
+                  We brainstormed Ideas on solutions to solve this ongoing
+                  issue. We decided on ways to gather research, deciding on
+                  interviewing participants.
+                </p>
+                <img
+                src="../Images/UX Case study2.png"
+                alt="picture of the case study."
+                />
+              </div>
+              <div>
+                <p>
+                  We conducted youth interviews to gage the best way to deliver
+                  access. We came to the realization that online would be the
+                  best way to reach as many people as possible.
+                </p>
+                <img
+                src="../Images/UX Case study3.png"
+                alt="screenshot of the interview questions"
+                />
+              </div>
+              <div>
+                <p>
+                  Together we came up with The Indigenous Cultural Bulletin! It
+                  is an app that allows communities to post their events,
+                  workshops and also teachings.Allowing all these things to be
+                  available right at the tip of your fingers. With the world
+                  becoming a tech led place this will allow all Indigenous
+                  Communities all over the world to add their own page. Allowing
+                  Communities to share their own events and also teachings that
+                  is relevant to their own teachings and knowledge.
+                </p>
+                <img
+                src="../Images/Casestudy screenshoot 1.png"
+                alt="case study"
+                />
+                <img
+                src="../Images/Casestudy screenshot.png"
+                alt="another part of case study "
+                />
+              </div>
+              <div class="link-flex">
+                <div class="caseStudy">
+                  <a href="https://drive.google.com/file/d/1e2FtXNl2JzB6wJBWtNt_AhLtzr5A_zp7/view?usp=sharing" target="_blank" class="button">View Case Study</a>
+                </div>
+                <div class="Prototype">
+                  <a href="https://drive.google.com/file/d/1jk2_RGVeFJLi0Xyaw2MeQ8Ahz2cFwRzk/view?usp=sharing" target="_blank" class="button">View Prototype</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Nish Nail Modal -->
+      <div id="modal-nish" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section class="NN-modal">
+            <div>
+              <h2>Nish Nails</h2>
+              <div>
+                <p>
+                  I collaborated with a small business to create and design a
+                  logo, business cards, and also a business flyer. Along with a
+                  Facebook banner for their business page. From start to finish
+                  with some direction and colour outline I was able to create a
+                  bright and vibrant design for Nish Nails
+                </p>
+              </div>
+              <div>
+                <p>
+                  I spoke with the owner and got an idea of what she was looking
+                  for, and colours she was wanting to go with. I got to work
+                  creating and designing allowing to combine all the proper
+                  needed information.
+                </p>
+                <img
+                src="../Images/Nish Nails Logo 2.jpg"
+                alt="Logo of Nish Nails"
+                />
+              </div>
+              <div>
+                <p>
+                  I then went on to design the business card. With all the
+                  necessary information needed.
+                </p>
+                <img
+                  src="../Images/Front Nish Nails.jpg"
+                  alt="Front of business card for Nish Nails"
+                  />
+                  <img
+                  src="../Images/back Nish Nails.jpg"
+                  alt="Back of business card for Nish Nails"
+                />
+              </div>
+              <div>
+                <p>
+                  With the flyer I wanted it to show the work they offer, along
+                  with all the information needed if you were to want to book an
+                  appointment.
+                </p>
+                <img
+                src="../Images/Nish Nails Flyer.jpg"
+                alt="Flyer for Nish Nails"
+                />
+              </div>
+              <div>
+                <p>
+                  I then went on to create the Facebook Banner for their
+                  business page. With displaying the work and just a simple name
+                  display.
+                </p>
+                <img
+                src="../Images/Nish Nail banner.jpg"
+                alt="Banner for Nish Nails"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Grant Proposal Modal -->
+      <div id="modal-gp" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section class="GP-modal">
+            <div>
+              <h2>Grant Proposal</h2>
+              <div>
+                <p>
+                  In this project, I crafted a comprehensive grant proposal for
+                  RiseUp Youth Initiatives, a nonprofit dedicated to empowering
+                  young people through targeted programs and support. My role
+                  involved a deep dive into the intricacies of grant funding,
+                  allowing me to gain valuable experience in the financial and
+                  strategic aspects of nonprofit management.
+                </p>
+                <p>
+                  Click the image to open the full document!
+                </p>
+                <a href="https://docs.google.com/document/d/1cKcKDD7NkFITKCskQ6wv4PHiYbbxjyxfbQEWY21I9Ng/edit?usp=sharing" target="_blank">
+                  <img
+                  src="../Images/RiseUp.png"
+                  alt="Grant Proposal front page"
+                  />
+                </a>
+                <!-- Link to the PDF of the Grant Proposal -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITLCT Modal -->
+        <div id="modal-itlct" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <section class="ITLCT-modal">
+              <div>
+                <h2>If These Lands Could Talk</h2>
+                <div>
+                  <p>
+                    This project is a one-pager website collaboration built by the Web-Dev Cohort-2 mentees of the Indigenous Friends Association's ‘IndigiTECH’ program. It was built for the non-profit organization ‘If These Lands Could Talk’ which supports Indigenous communities through allyship and digital stewardship.
+                  </p>
+                  <p>Click on images to see full picture!</p>
+                  <div class="ITLCT-Flex">
+                    <div class="item">
+                      <img src="../Images/IFLCT Home.png" alt="Homepage from ITLCT">
+                      <div class="full-image" id="home-image">
+                        <img src="../Images/IFLCT Home.png" alt="Homepage from ITLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/IFLCT About Us.png" alt="About us from LTLCT">
+                      <div class="full-image">
+                        <img src="../Images/IFLCT About Us.png" alt="About us from LTLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/ITLCT Our Impact.png" alt="Our Impact from ITLCT">
+                      <div class="full-image">
+                        <img src="../Images/ITLCT Our Impact.png" alt="Our Impact from ITLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/ITLCT Our Values.png" alt="Our Values from ITLCT">
+                      <div class="full-image">
+                        <img src="../Images/ITLCT Our Values.png" alt="Our Values from ITLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/ITLCT Events.png" alt="Events & Programs from ITLCT">
+                      <div class="full-image">
+                        <img src="../Images/ITLCT Events.png" alt="Events & Programs from ITLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/ITLCT Our Team.png" alt="Our Team from ITLCT">
+                      <div class="full-image">
+                        <img src="../Images/ITLCT Our Team.png" alt="Our Team from ITLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/IFLCT Contact.png" alt="Contact page from ITLCT">
+                      <div class="full-image">
+                        <img src="../Images/IFLCT Contact.png" alt="Contact page from ITLCT">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../Images/ITLCT Event Template.png" alt="Event Template from ITLCT">
+                      <div class="full-image">
+                        <img src="../Images/ITLCT Event Template.png" alt="Event Template from ITLCT">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p>
+                    Using the Figma file as a guide as a team we got started on creating each page individually dividing each one out. I worked on the Our Teams page. 
+                  </p>
+                  <img src="../Images/OurTeams Page.png" alt="Our Teams page">
+                  <p>
+                    Along with collaborating with the other interns. Using Github we brought the project to life. 
+                  </p>
+                  <p>
+                    Check out the full figma file in the link below.
+                  </p>
+                  <a href="https://dochub.com/m/shared-document/margaret-antone/ALzmZB7wM16M19ewX8J560/3-3-itlct-redesign-pdf-pdf?dt=cnsftTs5KvXCbZzMTsqs" target="_blank" class="figma-file">Figma File</a>
+                </div>
+              </div>
+            </section>
+            
+        </div>
+      </div>
+      <div id="modal-reno" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section class="reno-modal">
+            <h2>Volunteer Home Renovations</h2>
+            <div>
+              <h3>Basement Renovations</h3>
+              <p>
+                I volunteered my time and skills to a single mother to help renovate her basement space. I created two bedrooms in the space allowing there to be enough rooms to house her and her children.
+              </p>
+            </div>
+            <div>
+              <h3>Wall Framing & Subfloor</h3>
+              <p>
+                I emptied the space out and allowing me to design the two rooms. I started with the framing wall to divide the room into two. Then I started to lay the subfloor.
+              </p>
+              <img src="../Images/home reno 1.jpg" alt="Wall framing and subfloor">
+            </div>
+            <div>
+              <h3>Drywall & Flooring</h3>
+              <p>
+                Once the framing and sub-floor was completed I then I completed the drywall on the walls and installed the flooring of her choice. 
+              </p>
+              <img src="../Images/home reno 2.jpg" alt="Drywall completed">
+                      <img src="../Images/home reno 4.jpg" alt="Drywall completed in other room">
+                      <img src="../Images/home reno 3.jpg" alt="Flooring completed">
+                      <img src="../Images/home reno 5.jpg" alt="Flooring in other room">
+                      <img src="../Images/home reno 6.jpg" alt="Floor and drywall">
+                      <img src="../Images/home reno 7.jpg" alt="Flooring and drywall">
+                    </div>
+                    <div>
+                      <h3>Primer & Finishing Touches</h3>
+                      <p>
+                        I then primed the walls and came up with a final design for the rooms. 
+                      </p>
+                      <img src="../Images/home reno 8.jpg" alt="Primed walls">
+                      <img src="../Images/home reno 9.jpg" alt="Primed walls different side of room">
+                      <img src="../Images/home reno 10.jpg" alt="Primed walls from another angle">
+                    </div>
+                    <div>
+                      <h3>Digital Image mockup for Client</h3>
+                      <p>
+                        I sat down with the family and we went over colour and design they were looking for in the rooms. 
+                      </p>
+                      <img src="../Images/Floor plan.jpg" alt="Digital floor plan for room">
+                      <img src="../Images/Painting of the room.jpg" alt="Digital Mock up of the room">
+                    </div>
+                  </section>
+                </div>
+              </div>
+      </div>
+            </main>
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>
