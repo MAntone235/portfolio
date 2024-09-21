@@ -584,7 +584,7 @@ h3{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10% 8% 90% 8% ;
+    padding: 10% 8% 70% 8% ;
     height: 100vh; 
     width: 100vw; 
     box-sizing: border-box; 
@@ -1118,6 +1118,11 @@ footer{
         font-size: var(--font-size-14);
     }
 
+    .popup-content{
+        font-size: 14px;
+        margin-top: 5%;
+    }
+
     /* Experience Page */
     .exMain{
         height: 100%; 
@@ -1153,13 +1158,21 @@ footer{
     }
 
     /* Resume Page */
+
     .flipResume{
         margin-top: 10%;
         font-size: var(--font-size-14);
     }
+
+    .resume-main{
+        padding-bottom: 140%;
+        margin-top: 10%;
+    }
+
     .resume-main img{
         margin-left: 0%;
         width: 300px;
+        margin-top: 15%;
     } 
 
     /* Contact Page */
@@ -1167,8 +1180,8 @@ footer{
         height: 100%;
     }
 
-    .h1{
-        margin-left: 30%;
+    .CH1{
+        margin-left: 35%;
     }
 
     .contact-info{
@@ -1176,7 +1189,7 @@ footer{
     }
 
     .contact-flex{
-        margin-left: 28%;
+        margin-left: 15%;
     }
 
     .email-form{
